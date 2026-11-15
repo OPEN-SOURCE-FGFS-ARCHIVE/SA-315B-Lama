@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>enginepanel.ac</path>
+ 
+  
+
+  <animation>
+    <type>pick</type>
+    <object-name>switchguard</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+      
+        <command>property-toggle</command>
+        <property>controls/engines/engine/switchguard</property>
+      </binding>
+    </action>
+  
+  </animation>
+ 
+ 
+    
+  <animation>
+    <type>rotate</type>
+    <object-name>switchguard</object-name>
+  
+    <property>controls/engines/engine/switchguard</property>
+    <factor>105</factor>
+    <offset-deg>-105</offset-deg>
+    <center>
+      <x-m>0.014</x-m>
+      <y-m>0.041</y-m>
+      <z-m>0.032</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  
+   <animation>
+    <type>pick</type>
+    <object-name>startselector</object-name>
+     <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+ 		 
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/starter</property>
+      </binding>
+	   
+      
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+      </binding>
+	  
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/ignition</property>
+       </binding>
+	  
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/ignition</property>
+      </binding>
+	  </action>
+  </animation>
+  
+  
+    
+  <animation>
+    <type>rotate</type>
+    <object-name>startselector</object-name>
+    <property>controls/engines/engine/starter</property>
+    <factor>40</factor>
+    <offset-deg>-10</offset-deg>
+    <center>
+      <x-m>0.009</x-m>
+      <y-m>0.059</y-m>
+      <z-m>0.001</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+    
+  
+  <!-- dimming -->
+  
+   <animation>
+    <type>material</type>
+    <object-name>startselector</object-name>
+   
+   
+    <emission>
+      <factor-prop>controls/electric/directbat-switch</factor-prop>
+      <red>   0.3 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+  </animation>
+  
+  
+  <!--
+  <animation>
+    <type>material</type>
+    <object-name>Plane</object-name>
+  
+    <condition>
+      <property>systems/electrical/outputs/instrument-lights2-norm</property>
+      <equals>
+        <property>controls/lighting/instrument-lights-selection</property>
+        <value>0</value>
+      </equals>
+    </condition>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  1.0 </blue>
+      <factor>0.5</factor>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Plane</object-name>
+   
+    <condition>
+      <greater-than>
+        <property>controls/lighting/instrument-lights-selection</property>
+        <value>0</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  1.0 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights2-norm</factor-prop>
+    </emission>
+  </animation>
+
+ -->
+
+ 
+ 
+
+</PropertyList>

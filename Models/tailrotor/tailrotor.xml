@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>tailrotor.ac</path>
+  
+   <!--  REMBRANDT support for transparent objects-->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>sim/rendering/rembrandt/enabled</property>
+        </condition>
+		 <object-name>blurred1t</object-name>
+		
+		 <object-name>blurred2t</object-name>
+		
+		 <object-name>blurred3t</object-name>
+		
+		
+	
+     
+        
+    </effect> 
+
+  <animation>
+     <name>rotorcomplete</name>
+    <object-name>fulcrum</object-name>
+    <object-name>bladeAt</object-name>
+    <object-name>bladeBt</object-name>
+     <object-name>bladeCt</object-name>
+    <object-name>collective_star</object-name>
+	 <object-name>blurred1t</object-name>
+		
+		 <object-name>blurred2t</object-name>
+		
+		 <object-name>blurred3t</object-name>
+  </animation>
+
+   <animation>
+    <type>spin</type>
+    <object-name>rotorcomplete</object-name>
+    <property>rotors/tail/rpm</property>
+    <center>
+       <x-m> 0.000 </x-m>
+       <y-m> 0.000 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  1.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+  <!-- Blade C rotate -->
+  <animation>
+    <type>rotate</type>
+    <object-name>bladeCt</object-name>
+    <property>/rotors/tail/blade/incidence-deg</property>
+     <factor>1</factor>
+    <center>
+       <x-m> 0.000 </x-m>
+       <y-m> 0.000 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z>  1.000 </z>
+    </axis>
+  </animation>
+
+  <!-- blade A rotate -->
+  <animation>
+    <type>rotate</type>
+    <object-name>bladeAt</object-name>
+    <property>/rotors/tail/blade[1]/incidence-deg</property>
+    <factor>1</factor>
+    <axis>
+      <x1-m>  0.000 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m>  0.000 </z1-m>
+      <x2-m>  0.842 </x2-m>
+      <y2-m>  0.000 </y2-m>
+      <z2-m>  -0.500 </z2-m>
+    </axis>
+  </animation>
+
+<!-- blade b rotate -->
+  <animation>
+    <type>rotate</type>
+    <object-name>bladeBt</object-name>
+    <property>/rotors/tail/blade[2]/incidence-deg</property>
+    <factor>1</factor>
+    <axis>
+      <x1-m>  0.000 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m>  0.000 </z1-m>
+      <x2-m>  -0.842 </x2-m>
+      <y2-m>  0.000 </y2-m>
+      <z2-m>  -0.500 </z2-m>
+    </axis>
+  </animation>
+
+<!-- collective -->
+  <animation>
+    <type>translate</type>
+    <object-name>collective_star</object-name>
+    <property>/rotors/tail/blade/incidence-deg</property>
+    <factor>0.0016</factor>
+    <axis>
+      <x>  0.000 </x>
+      <y>  1.000 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
+  
+  
+  	<animation>
+		<type>material</type>
+		<object-name>blurred1t</object-name>
+		<object-name>blurred2t</object-name>
+		<object-name>blurred3t</object-name>
+		<transparency>
+			<alpha-prop>rotors/main/rpm</alpha-prop>
+			<factor>0.004</factor>
+			<offset>0.0</offset>
+			<max>0.4</max>
+		</transparency>
+		<threshold>0.001</threshold>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bladeAt</object-name>
+          	<object-name>bladeBt</object-name>
+          	<object-name>bladeCt</object-name>
+		<condition>
+			<less-than>
+				<property>rotors/main/rpm</property>
+				<value>225</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+      <animation>
+       <type>select</type>
+		<object-name>blurred1t</object-name>
+		<object-name>blurred2t</object-name>
+		<object-name>blurred3t</object-name>
+          	<condition>
+			<greater-than>
+				<property>rotors/main/rpm</property>
+				<value>200</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+</PropertyList>
+

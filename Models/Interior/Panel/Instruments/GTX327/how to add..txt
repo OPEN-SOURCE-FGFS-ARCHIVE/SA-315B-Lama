@@ -1,0 +1,28 @@
+Copy the contents of the Nasal folder to your aircraft Nasal folder.
+
+Add this to your nasal section of your set file:-
+
+<gtx327>
+
+<file>Aircraft/YOUR AIRCRAFT/Nasal/gtx-327.nas</file>
+ ! edit to your aircrafts own nasal  location.
+</gtx327>
+
+Add the GTX to your Instruments or panel.xml:-
+
+<model>
+<name>gtx-327</name>
+
+<path>Aircraft/YOUR AIRCRAFT/Models/Instruments/gtx-327/gtx-327.xml</path>
+  ! Alter path to suit your aircraft.
+<offsets>
+			
+<x-m>o</x-m>
+		! Alter XYZ to fit your cockpit.	
+<y-m>o</y-m>
+			
+<z-m>o</z-m>
+		
+</offsets>
+	
+</model>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>ai.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>bouton</object-name>
+    <object-name>scale</object-name>
+    <object-name>face</object-name>
+    <object-name>background</object-name>
+    <object-name>markings</object-name>
+    <object-name>float</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+ 
+ <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        
+		 <object-name>vitre</object-name>
+		
+    </effect> 
+
+
+
+  <animation>
+    <type>material</type>
+    <object-name>scale</object-name>
+    <object-name>face</object-name>
+    <object-name>background</object-name>
+    <object-name>markings</object-name>
+    <object-name>float</object-name>
+    <emission>
+      <red>   0.6 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+      <factor-prop>controls/electric/directbat-switch</factor-prop>
+    </emission> 
+  </animation>    
+
+
+ <!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.017</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.6</r>
+      <g>0.3</g>
+      <b>0.3</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>2</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.2</intensity>
+  <dim-factor>
+    <property>systems/electrical/outputs/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  
+   <equals>
+    <property>controls/electric/directbat-switch</property>
+    <value>true</value>
+   </equals>
+  
+  </condition>
+ </animation>
+
+<!-- end compositor light -->
+
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>background</object-name>
+    <object-name>scale</object-name>
+    <object-name>float</object-name>
+	  <condition>
+		<not>
+		<equals>
+		<property>controls/electric/avionics-switch</property>
+		<value>false</value>
+		</equals>
+		</not>
+		</condition>
+    <property>/orientation/roll-deg</property>
+    <factor>1.0</factor>
+    <axis>
+      <x>1.0</x>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>float</object-name>
+	  <condition>
+		<not>
+		<equals>
+		<property>controls/electric/avionics-switch</property>
+		<value>false</value>
+		</equals>
+		</not>
+		</condition>
+    <property>/orientation/pitch-deg</property>
+    <factor>-0.0002</factor>
+    <min-m>-0.1</min-m>
+    <max-m>0.1</max-m>
+    <axis>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+</PropertyList>

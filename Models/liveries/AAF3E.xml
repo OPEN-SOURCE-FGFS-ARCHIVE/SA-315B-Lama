@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">Argentine Air Force, 3 Escudron</name>
+        <texture>liveries/AAF3E/315B_ext.jpg</texture>
+         <winch>liveries/AAF3E/winch.png</winch>
+      </livery>
+	   <bo105>
+	   <hdr>false</hdr>
+		<als>true</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>

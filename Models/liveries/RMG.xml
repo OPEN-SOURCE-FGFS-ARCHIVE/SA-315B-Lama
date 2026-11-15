@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">Royal Moroccan Gendarmerie</name>
+        <texture>liveries/RMG/315B_ext.jpg</texture>
+         <winch>liveries/RMG/winch.png</winch>
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.3</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>

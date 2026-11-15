@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior2.ac</path>
+
+  <animation>
+    <object-name>interieur</object-name>
+    <object-name>mancheD</object-name>
+    <object-name>MancheG</object-name>
+    <object-name>mancheG</object-name>
+    <object-name>paloDD</object-name>
+    <object-name>paloDG</object-name>
+    <object-name>paloGD</object-name>
+    <object-name>paloGG</object-name>
+    <object-name>sieges</object-name> 
+    
+    <object-name>collective</object-name>
+   
+    <object-name>collective_base</object-name>
+  </animation>
+
+  <!-- Tableau de bord -->
+  <model>
+  <name>panel</name>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.937 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.050 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+   <!-- panel vibration experiment -->
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+   <condition>
+				<greater-than>
+					<property>sim/sound/vibration</property>
+					<value>0.01</value>
+				</greater-than>
+			</condition>
+    <factor>0.09</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 1 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/longitudinal</property>
+    <factor>0.009</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+   <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/lateral</property>
+    <factor>0.01</factor>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/overhead.xml</path>
+    <offsets>
+      <x-m> -1.97 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.050 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/MagCompass/magcompass.xml</path>
+    <offsets>
+      <x-m> -2.12 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.57 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <!-- Pilote -->
+  <!-- model>
+    <name>Pilote</name>
+    <path>Aircraft/SA-315B-Lama/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.937 </x-m>
+      <y-m>  0.392 </y-m>
+      <z-m> -0.452 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model -->
+
+  <!-- rudder pedals -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>paloDG</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>16</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m>  0.439 </y-m>
+      <z-m> -0.435 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>paloDD</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>-16</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m>  0.338 </y-m>
+      <z-m> -0.435 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Copilote -->
+  <animation>
+    <type>rotate</type>
+    <object-name>paloGG</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>16</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m> -0.338 </y-m>
+      <z-m> -0.435 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>paloGD</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>-16</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m> -0.439 </y-m>
+      <z-m> -0.435 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+   <!-- Pedal boots 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>R-Lped-boot</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>7</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m>  0.439 </y-m>
+      <z-m> -0.442 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>R-Rped-boot</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>-7</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m>  0.338 </y-m>
+      <z-m> -0.442 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>L-Lped-boot</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>7</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m> -0.338 </y-m>
+      <z-m> -0.442 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>L-Rped-boot</object-name>
+    <property>/controls/flight/rudder</property>
+    <factor>-7</factor>
+    <center>
+      <x-m> -2.293 </x-m>
+      <y-m> -0.439 </y-m>
+      <z-m> -0.442 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+-->
+  <!-- Cyclic -->
+
+<animation>
+    <name>cyclicr</name>
+    <object-name>mancheD</object-name>
+	
+   
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cyclicr</object-name>
+	 
+    <property>/controls/flight/elevator</property>
+    <factor>-10</factor>
+    <center>
+      <x-m> -2.147 </x-m>
+      <y-m>  0.388 </y-m>
+      <z-m> -0.425 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cyclicr</object-name>
+	
+    <property>/controls/flight/aileron</property>
+    <factor>-10</factor>
+    <center>
+      <x-m> -2.147 </x-m>
+      <y-m>  0.388 </y-m>
+      <z-m> -0.435 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  <animation>
+    <name>cyclicl</name>
+    <object-name>mancheG</object-name>
+	
+   
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cyclicl</object-name>
+	
+    <property>/controls/flight/elevator</property>
+    <factor>-10</factor>
+    <center>
+      <x-m> -2.147 </x-m>
+      <y-m> -0.388 </y-m>
+      <z-m> -0.435 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cyclicl</object-name>
+	
+    <property>/controls/flight/aileron</property>
+    <factor>-10</factor>
+    <center>
+      <x-m> -2.147 </x-m>
+      <y-m> -0.388 </y-m>
+      <z-m> -0.435 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<!-- collective control -->
+  
+ <model>
+  <name>collective1</name>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/collective.xml</path>
+    <offsets>
+      <x-m> -1.66 </x-m>
+      <y-m>  0.14 </y-m>
+      <z-m>  -0.35</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model> 
+  
+  <model>
+  <name>collective2a</name>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/collective.xml</path>
+    <offsets>
+      <x-m> -1.66 </x-m>
+      <y-m>  -0.67 </y-m>
+      <z-m>  -0.35</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model> 
+  
+  
+  
+  
+  
+ 
+  <!-- Porte passager 
+  <animation>
+    <type>rotate</type>
+    <object-name>intvitreporteG</object-name>
+    <property>/instrumentation/doors/passenger/position-norm</property>
+    <factor> -175.0 </factor>
+    <center>
+      <x-m> -4.215 </x-m>
+      <y-m> -0.819 </y-m>
+      <z-m> -0.438 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>-->
+
+  <!-- Porte pilote 
+  <animation>
+    <type>rotate</type>
+    <object-name>intvitreporteD</object-name>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> 175.0 </factor>
+    <center>
+      <x-m> -4.215 </x-m>
+      <y-m>  0.819 </y-m>
+      <z-m> -0.438 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>-->
+  
+  
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/woolthread/woolthread.xml</path>
+    <offsets>
+      <x-m> -2.32 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.42 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+

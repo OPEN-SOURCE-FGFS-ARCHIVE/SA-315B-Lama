@@ -1,0 +1,2 @@
+var aircraft_dialog = gui.Dialog.new("/sim/gui/dialogs/bo105/aircraft/dialog", "Aircraft/SA-315B-Lama/Models/helicargo/Inputs/aircraft-dialog.xml");
+var aicargo_dialog = gui.Dialog.new("/sim/gui/dialogs/bo105/aicargo/dialog", "Aircraft/SA-315B-Lama/Models/helicargo/Inputs/aicargo-dialog.xml");

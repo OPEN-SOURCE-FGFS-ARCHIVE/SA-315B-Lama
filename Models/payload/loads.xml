@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+<model>
+		<name>Pylons</name>
+		<path>Aircraft/SA-315B-Lama/Models/payload/pylons.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+
+  
+
+  <model>
+		<name>Basic Airframe</name>
+		<path>Aircraft/SA-315B-Lama/Models/payload/basic.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Basic Airframe</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[5]</property>
+          <value>Basic Airframe</value>
+        </equals>
+       
+    </condition>
+  </animation>
+  
+   <model>
+		<name>Passenger</name>
+		<path>Aircraft/SA-315B-Lama/Models/payload/passenger.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Passenger</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[5]</property>
+          <value>Passenger</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+
+  <model>
+		<name>SAR</name>
+		<path>Aircraft/SA-315B-Lama/Models/payload/sar.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>SAR</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[5]</property>
+          <value>SAR</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+
+
+
+ <model>
+		<name>Cargo</name>
+		<path>Aircraft/SA-315B-Lama/Models/payload/cargo.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Cargo</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[5]</property>
+          <value>Cargo</value>
+        </equals>
+     
+    </condition>
+  </animation>
+  
+  <model>
+		<name>Altitude Record</name>
+		<path>Aircraft/SA-315B-Lama/Models/payload/alt.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Altitude Record</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[5]</property>
+          <value>Altitude Record</value>
+        </equals>
+     
+    </condition>
+  </animation>
+
+
+  
+  <animation>
+  <type>select</type>
+  <object-name>pylon.C</object-name>  
+  <condition>
+  <or>
+   
+  
+  
+  
+   <equals>
+    <property>sim/multiplay/generic/string[5]</property>
+    <value>SAR</value>
+   </equals>
+  
+   <equals>
+    <property>sim/multiplay/generic/string[5]</property>
+    <value>Basic Airframe</value>
+   </equals>
+   
+   <equals>
+    <property>sim/multiplay/generic/string[5]</property>
+    <value>Cargo</value>
+   </equals>
+   
+   <equals>
+    <property>sim/multiplay/generic/string[5]</property>
+    <value>Passenger</value>
+   </equals>
+   
+   <equals>
+    <property>sim/multiplay/generic/string[5]</property>
+    <value>Altitude Record</value>
+   </equals>
+   
+  </or>
+  </condition>
+ </animation>
+
+</PropertyList>

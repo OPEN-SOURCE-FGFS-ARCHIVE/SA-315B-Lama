@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>rotor-trans.ac</path>
+  
+  <!--  REMBRANDT support for transparent objects-->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>sim/rendering/rembrandt/enabled</property>
+        </condition>
+		 <object-name>blurred1</object-name>
+		
+		 <object-name>blurred2</object-name>
+		
+		 <object-name>blurred3</object-name>
+		
+		
+	
+       <!-- <object-name>bladea</object-name>
+        <object-name>bladeb</object-name>
+        <object-name>bladec</object-name>-->
+        
+    </effect> 
+
+  <animation>
+    <object-name>trans-shell</object-name>
+    <object-name>lower-swashplate</object-name>
+    <object-name>right-cc-rod</object-name>
+    <object-name>pitch-cc-rod</object-name>
+    <object-name>left-cc-rod</object-name>
+    <object-name>lowerswash-trunion1</object-name>
+    <object-name>lowerswash-trunion2</object-name>
+    <object-name>upper-swashplate</object-name>
+    <object-name>starflex</object-name>
+    <object-name>bladeA</object-name>
+    <object-name>bladeA-base</object-name>
+    <object-name>bladeA-clevis</object-name>
+    <object-name>bladeB</object-name>
+    <object-name>bladeB-base</object-name>
+    <object-name>bladeB-clevis</object-name>
+    <object-name>bladeC</object-name>
+    <object-name>bladeC-base</object-name>
+    <object-name>bladeC-clevis</object-name>
+    <object-name>upperswash-trunion2</object-name>
+    <object-name>upperswash-trunion1</object-name>
+  </animation>
+
+  <animation> 
+   <name>main-rotorspin</name>
+   <object-name>upper-swashplate</object-name>
+    <object-name>starflex</object-name>
+    <object-name>bladeA</object-name>
+    <object-name>bladeA-base</object-name>
+    <object-name>bladeA-clevis</object-name>
+    <object-name>bladeB</object-name>
+    <object-name>bladeB-base</object-name>
+    <object-name>bladeB-clevis</object-name>
+    <object-name>bladeC</object-name>
+    <object-name>bladeC-base</object-name>
+    <object-name>bladeC-clevis</object-name>
+    <object-name>upperswash-trunion2</object-name>
+    <object-name>upperswash-trunion1</object-name>
+	<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+  </animation> 
+
+   <animation>
+    <type>spin</type>
+    <object-name>main-rotorspin</object-name>
+    <property>rotors/main/rpm</property>
+    <center>
+       <x-m> 0.000 </x-m>
+       <y-m> 0.000 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z>  -1.000 </z>
+    </axis>
+  </animation>
+
+ <animation>
+  <name>rotorcollect</name>
+    <object-name>lower-swashplate</object-name>
+    <object-name>right-cc-rod</object-name>
+    <object-name>pitch-cc-rod</object-name>
+    <object-name>left-cc-rod</object-name>
+    <object-name>upper-swashplate</object-name>
+ </animation>
+
+<!-- collective -->
+  <animation>
+    <type>translate</type>
+    <object-name>rotorcollect</object-name>
+    <property>/controls/engines/engine/throttle</property>
+    <factor>-0.0256</factor>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z>  1.00 </z>
+    </axis>
+  </animation>
+
+<!-- cyclic- pitch -->
+  <animation>
+    <type>rotate</type>
+    <object-name>lower-swashplate</object-name>
+    <object-name>right-cc-rod</object-name>
+    <object-name>pitch-cc-rod</object-name>
+    <object-name>left-cc-rod</object-name>
+    <property>/controls/flight/elevator</property>
+    <factor>-6</factor>
+     <axis>
+      <x1-m>  -0.063 </x1-m>
+      <y1-m>  0.170 </y1-m>
+      <z1-m>  0.252 </z1-m>
+      <x2-m>  0.060 </x2-m>
+      <y2-m>  -0.170 </y2-m>
+      <z2-m>  0.252 </z2-m>
+    </axis>
+  </animation>
+
+ <!-- cyclic roll -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lower-swashplate</object-name>
+    <object-name>right-cc-rod</object-name>
+    <object-name>pitch-cc-rod</object-name>
+    <object-name>left-cc-rod</object-name>
+    <property>/controls/flight/aileron</property>
+    <factor>-6</factor>
+     <axis>
+      <x1-m>  -0.170 </x1-m>
+      <y1-m>  -0.060 </y1-m>
+      <z1-m>  0.252 </z1-m>
+      <x2-m>  0.170 </x2-m>
+      <y2-m>  0.063 </y2-m>
+      <z2-m>  0.252 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Blade B rotate -->
+  <animation>
+    <type>rotate</type>
+    <object-name>bladeB</object-name>
+    <object-name>bladeB-base</object-name>
+    <property>/rotors/main/blade[1]/incidence-deg</property>
+     <factor>-1</factor>
+    <center>
+       <x-m> 0.000 </x-m>
+       <y-m> 0.000 </y-m>
+       <z-m> 0.569 </z-m>
+    </center>
+    <axis>
+      <x>  -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+<!-- Blade B clevis -->
+  <animation>
+    <type>translate</type>>
+    <object-name>bladeB-clevis</object-name>
+    <property>/rotors/main/blade[1]/incidence-deg</property>
+     <factor>0.00306</factor>
+    <center>
+       <x-m> -0.12 </x-m>
+       <y-m> -0.10 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z>  1.000 </z>
+    </axis>
+  </animation>
+
+  <!-- blade C rotate -->
+  <animation>
+    <type>rotate</type>
+    <object-name>bladeC</object-name>
+    <object-name>bladeC-base</object-name>
+    <property>/rotors/main/blade[2]/incidence-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>  0.000 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m>  0.569 </z1-m>
+      <x2-m>  0.500 </x2-m>
+      <y2-m>  0.842 </y2-m>
+      <z2-m>  0.569 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- blade C clevis -->
+  <animation>
+    <type>translate</type>>
+    <object-name>bladeC-clevis</object-name>
+    <property>/rotors/main/blade[2]/incidence-deg</property>
+    <factor>0.00306</factor>
+    <center>
+       <x-m> 0.150 </x-m>
+       <y-m> -0.050 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z>  1.000 </z>
+    </axis>
+  </animation>
+
+<!-- blade A rotate -->
+  <animation>
+    <type>rotate</type>
+    <object-name>bladeA</object-name>
+    <object-name>bladeA-base</object-name>
+    <property>/rotors/main/blade/incidence-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>  0.000 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m>  0.569 </z1-m>
+      <x2-m>  0.500 </x2-m>
+      <y2-m>  -0.842 </y2-m>
+      <z2-m>  0.569 </z2-m>
+    </axis>
+  </animation>
+
+<!-- blade A clevis -->
+  <animation>
+    <type>translate</type>
+    <object-name>bladeA-clevis</object-name>
+    <property>/rotors/main/blade/incidence-deg</property>
+    <factor>0.00306</factor>
+     <center>
+       <x-m> -0.020 </x-m>
+       <y-m> 0.160 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x>  0.000 </x>
+      <y>  0.000 </y>
+      <z>  1.000 </z>
+    </axis>
+  </animation>
+  
+<!--  <animation>
+	<type>material</type>
+	<object-name>bladeA</object-name>
+          	<object-name>bladeB</object-name>
+          	<object-name>bladeC</object-name>
+		<global type="bool">true</global>
+		<transparency>
+			<alpha-prop>rotors/main/rpm</alpha-prop>
+			<factor>-0.0045</factor>
+			<offset>1</offset>
+			<max>1</max>
+		</transparency>
+    </animation>-->
+
+<animation>
+		<type>select</type>
+		<object-name>bladeA</object-name>
+          	<object-name>bladeB</object-name>
+          	<object-name>bladeC</object-name>
+		<condition>
+			<less-than>
+				<property>rotors/main/rpm</property>
+				<value>225</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+      <animation>
+       <type>select</type>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+          	<condition>
+			<greater-than>
+				<property>rotors/main/rpm</property>
+				<value>200</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+   	<animation>
+		<type>material</type>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+		<transparency>
+			<alpha-prop>rotors/main/rpm</alpha-prop>
+			<factor>0.004</factor>
+			<offset>0.0</offset>
+			<max>0.4</max>
+		</transparency>
+		<threshold>0.001</threshold>
+	</animation>
+
+<!--	<animation>
+		<type>rotate</type>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+		<property>rotors/main/blade[0]/position-deg</property>
+		<factor>1</factor>
+             <axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+	</animation>-->
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+	</animation>
+
+</PropertyList>
+

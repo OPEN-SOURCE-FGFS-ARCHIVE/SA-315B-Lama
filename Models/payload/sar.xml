@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/SA-315B-Lama/Models/People/sar/pilots.xml</path>
+<offsets>
+<x-m> -2.77 </x-m>
+<y-m>  -0.0 </y-m>
+<z-m> 0.07 </z-m>
+</offsets>
+</model>
+
+<model>
+<name>pilot2</name>
+<path>Aircraft/SA-315B-Lama/Models/People/sar/pilots.xml</path>
+<offsets>
+<x-m> -2.77 </x-m>
+<y-m>  -0.81 </y-m>
+<z-m> 0.07 </z-m>
+</offsets>
+</model>
+
+<model>
+<name>crew1</name>
+<path>Aircraft/SA-315B-Lama/Models/kit/Rescue/Rescue-Man2.xml</path>
+<offsets>
+<x-m> -0.85 </x-m>
+<y-m>  0.0 </y-m>
+<z-m> 0.2 </z-m>
+<pitch-deg>20</pitch-deg>
+</offsets>
+<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.8</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+   </animation>
+  </overlay>
+</model>
+
+
+
+<!-- Search Light
+<model>
+<path>Aircraft/AS350/Models/kit/SearchLight2/searchlight.xml</path>
+<offsets>
+<x-m> -3.8 </x-m>
+<y-m> 0</y-m>
+<z-m> -0.9 </z-m>
+</offsets>
+</model> -->
+
+
+<!-- winch -->
+<model>
+<path>Aircraft/SA-315B-Lama/Models/kit/winch/winch.xml</path>
+<offsets>
+<x-m>0.2</x-m>
+<y-m>-0.2</y-m>
+<z-m>-0.0</z-m>
+</offsets>
+</model>
+
+<!-- right basket -->
+<model>
+
+<path>Aircraft/SA-315B-Lama/Models/kit/basket/basket.xml</path>
+<offsets>
+<x-m> -0.4 </x-m>
+<y-m>  -0.8 </y-m>
+<z-m> -0.7 </z-m>
+</offsets>
+</model>
+
+<!-- left basket -->
+<model>
+
+<path>Aircraft/SA-315B-Lama/Models/kit/basket/basket.xml</path>
+<offsets>
+<x-m> -0.4 </x-m>
+<y-m>  0.8 </y-m>
+<z-m> -0.7 </z-m>
+</offsets>
+</model>
+
+<!-- left mirror -->
+<model>
+
+<path>Aircraft/SA-315B-Lama/Models/kit/mirrors/leftmirror.xml</path>
+<offsets>
+<x-m>0</x-m>
+<y-m>0.0</y-m>
+<z-m>0</z-m>
+</offsets>
+</model>
+
+<!-- right mirror -->
+<model>
+
+<path>Aircraft/SA-315B-Lama/Models/kit/mirrors/rightmirror.xml</path>
+<offsets>
+<x-m>0</x-m>
+<y-m>0</y-m>
+<z-m>0</z-m>
+</offsets>
+</model>
+
+
+</PropertyList>

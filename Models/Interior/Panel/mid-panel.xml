@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>mid-panel.ac</path>
+
+  
+ <!-- Warning lights -->
+
+<!-- Red lights -->
+  <animation>
+  <type>material</type>
+  
+    <object-name>masterwarn</object-name>
+   <object-name>pitot</object-name>
+   <object-name>mgp</object-name>
+   <object-name>mgt</object-name>
+    <object-name>oilp</object-name>
+	 <object-name>start</object-name>
+	  <object-name>gene</object-name>
+	    <object-name>fuel</object-name>
+  <ambient>
+    <red>0.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.1</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </emission> 
+ </animation>	
+
+
+ <text>
+  <name>masterwarn</name>
+  <font>led.txf</font>
+  <character-size type="double">0.11</character-size>
+  <offsets>
+ 
+			 <x-m>-0.209</x-m>
+  <y-m>-0.046</y-m>
+ <z-m>-0.015</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+ 
+  <animation>
+        <type>select</type>
+      
+    <object-name>masterwarn</object-name>
+	
+        
+	 <condition>
+	 <and>
+	 <equals>
+	 <property>controls/electric/directbat-switch</property>
+<value>true</value>
+</equals>
+</and>	 
+			 <or>
+		<less-than>
+			<property>consumables/fuel/total-fuel-lbs</property>
+			<value>190</value>
+		</less-than>
+
+		<not>
+			<property>engines/engine[0]/running</property>
+		</not>
+	
+		<less-than>
+			<property>engines/engine/n1-rpm</property>
+			<value>31000</value>
+		</less-than>
+	
+		<less-than>
+			<property>rotors/main/rpm</property>
+			<value>300</value>
+		</less-than>
+		
+		<greater-than>
+			<property>rotors/main/rpm</property>
+			<value>420</value>
+		</greater-than>
+
+		<less-than>
+      <property>rotors/gear/mgb-oil-pressure-norm</property>
+	  <value>3.5</value>
+	  </less-than>
+	  
+	   <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+		
+	   </or>
+	
+			
+			</condition>
+    </animation>
+
+<text>
+  <name>pitot</name>
+  <font>led.txf</font>
+  <character-size type="double">0.06</character-size>
+  <offsets>
+ 
+			 <x-m>-0.209</x-m>
+  <y-m>-0.106</y-m>
+ <z-m>-0.061</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+ 
+ 
+  <animation>
+        <type>select</type>
+      
+    <object-name>pitot</object-name>
+	<condition>
+      <or>
+        <greater-than>
+          <property>sim/failure-manager/systems/pitot/failure-level</property>
+          <value>0.3</value>
+        </greater-than>
+		
+		 <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+ 
+        <and>
+          <less-than>
+            <property>environment/temperature-degc</property>
+            <value>4.0</value>
+          </less-than>
+
+          <not>
+            <property>controls/anti-ice/pitot-heat</property>
+			<value>true</value>
+          </not>
+		  
+		   <equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		  
+        </and>
+      </or>
+    </condition>
+    </animation>
+ 
+ <text>
+  <name>gene</name>
+  <font>led.txf</font>
+  <character-size type="double">0.06</character-size>
+  <offsets>
+ 
+			 <x-m>-0.209</x-m>
+  <y-m>0.139</y-m>
+ <z-m>-0.0605</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <animation>
+        <type>select</type>
+      
+    <object-name>gene</object-name>
+	 <condition>
+	 <and>
+	 <equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+	 
+  <or>
+    <less-than>
+			<property>engines/engine/n1-rpm</property>
+			<value>21000</value>
+		</less-than>
+		
+	 <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+
+</or>		
+	
+	  </condition>
+  </animation>
+   
+	
+	 <text>
+  <name>mgp</name>
+  <font>led.txf</font>
+  <character-size type="double">0.06</character-size>
+  <offsets>
+ 
+			 <x-m>-0.209</x-m>
+  <y-m>0.189</y-m>
+ <z-m>-0.0605</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+   <animation>
+        <type>select</type>
+      
+    <object-name>mgp</object-name>
+	<condition>
+	<and>
+	<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+	<or>
+	<less-than>
+      <property>rotors/gear/mgb-oil-pressure-norm</property>
+	  <value>3.5</value>
+	  </less-than>
+	  
+	   <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+	  </or>
+    </condition>
+  </animation>
+  
+  	 <text>
+  <name>mgt</name>
+  <font>led.txf</font>
+  <character-size type="double">0.06</character-size>
+  <offsets>
+ 
+			 <x-m>-0.209</x-m>
+  <y-m>0.211</y-m>
+ <z-m>-0.0605</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <animation>
+        <type>select</type>
+      
+    <object-name>mgt</object-name>
+	<condition>
+	<and>
+	<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+	<or>
+	<less-than>
+      <property>engines/engine[1]/tot-degc</property>
+	  <value>600</value>
+	  </less-than>
+
+	   <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+		
+		</or>
+	  
+    </condition>
+  </animation>
+  
+    	 <text>
+  <name>start</name>
+  <font>led.txf</font>
+  <character-size type="double">0.05</character-size>
+  <offsets>
+ 
+			 <x-m>-0.206</x-m>
+  <y-m>0.008</y-m>
+ <z-m>-0.107</z-m>
+ <pitch-deg>-5</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <animation>
+    <type>select</type>
+    <object-name>start</object-name>
+    <condition>
+	<and>
+	<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+	<or>
+	
+	<not>
+      <property>engines/engine/running</property>
+	   <value>false</value>
+	   </not>
+	   
+	  </or> 
+    </condition>
+  </animation>
+  
+  	 <text>
+  <name>oilp</name>
+  <font>led.txf</font>
+  <character-size type="double">0.05</character-size>
+  <offsets>
+ 
+			 <x-m>-0.206</x-m>
+  <y-m>0.028</y-m>
+ <z-m>-0.107</z-m>
+ <pitch-deg>-5</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <animation>
+    <type>select</type>
+    <object-name>oilp</object-name>
+    <condition>
+	<and>
+	<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+	<or>
+	
+	<less-than>
+      <property>engines/engine/n1-pct</property>
+	   <value>50</value>
+	  </less-than>
+	  
+	   <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+		
+		</or>
+	  
+    </condition>
+  </animation>
+  
+  
+  <text>
+  <name>fuel</name>
+  <font>led.txf</font>
+  <character-size type="double">0.04</character-size>
+  <offsets>
+ 
+<x-m>-0.1935</x-m>
+  <y-m>0.025</y-m>
+ <z-m>-0.153</z-m>
+ <pitch-deg>-5</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <animation>
+    <type>select</type>
+    <object-name>fuel</object-name>
+    <condition>
+	<and>
+	<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+	<or>
+	
+	<less-than>
+      <property>consumables/fuel/total-fuel-gals</property>
+	   <value>5</value>
+	  </less-than>
+	  
+	   <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+		
+		</or>
+    </condition>
+  </animation>
+  
+  <!--green lights -->
+  <animation>
+  <type>material</type>
+  
+    <object-name>starting</object-name>
+   
+  <ambient>
+    <red>0.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.0</red>
+    <green>0.1</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.0</red>
+    <green>0.8</green>
+    <blue>0.0</blue>
+  </emission> 
+ </animation>	
+ 
+  <text>
+  <name>starting</name>
+  <font>led.txf</font>
+  <character-size type="double">0.05</character-size>
+  <offsets>
+ 
+			 <x-m>-0.206</x-m>
+  <y-m>-0.029</y-m>
+ <z-m>-0.107</z-m>
+ <pitch-deg>-5</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <animation>
+        <type>select</type>
+        <object-name>starting</object-name>
+      
+        <condition>
+		<and>
+		<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+		
+		
+			<or>
+				<property>controls/engines/engine/starter</property>
+						
+				 <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+            </or>		
+			</condition>
+    </animation>
+	
+	
+<!--yellow lights -->
+  <animation>
+  <type>material</type>
+  
+    <object-name>fuelp</object-name>
+   <object-name>microp</object-name>
+  <ambient>
+    <red>0.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.8</green>
+    <blue>0.0</blue>
+  </emission> 
+ </animation>	
+
+ <text>
+  <name>microp</name>
+  <font>led.txf</font>
+  <character-size type="double">0.05</character-size>
+  <offsets>
+ 
+			 <x-m>-0.206</x-m>
+  <y-m>-0.01</y-m>
+ <z-m>-0.107</z-m>
+ <pitch-deg>-5</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+ 
+ <animation>
+        <type>select</type>
+        <object-name>microp</object-name>
+      
+        <condition>
+		<and>
+		<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+		   </and>
+		<or>
+			
+				<property>engines/engine/running</property>
+				<value>true</value>	
+ <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+</or>
+				
+			</condition>
+    </animation>
+	
+ <text>
+  <name>fuelp</name>
+  <font>led.txf</font>
+  <character-size type="double">0.06</character-size>
+  <offsets>
+ 
+			 <x-m>-0.209</x-m>
+  <y-m>0.1623</y-m>
+ <z-m>-0.0605</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">.</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+   <animation>
+        <type>select</type>
+      
+    <object-name>fuelp</object-name>
+	<condition>
+	<and>
+	<equals>
+	        <property>controls/electric/directbat-switch</property>
+            <value>true</value>
+           </equals>
+	</and>	   
+	<or>
+	<equals>
+      <property>controls/switches/fuel/transfer-pump</property>
+	  <value>false</value>
+	  </equals>
+	  
+	   <equals>
+          <property>controls/electric/warningtest</property>
+          <value>true</value>
+        </equals>
+	  </or>
+    </condition>
+  </animation>	
+	
+	
+
+</PropertyList>
+

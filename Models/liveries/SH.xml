@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">Swiss Helicopter</name>
+        <texture>liveries/SH/315B_ext.jpg</texture>
+         <winch>liveries/SH/winch.png</winch>
+      </livery>
+	   <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.2</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>

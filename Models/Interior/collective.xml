@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<!-- for UH-60 HD -->
+ 
+ 
+
+    
+    <path>collective2.ac</path>
+ 
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>collective2</object-name>
+	
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -20</factor>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  
+   
+
+</PropertyList>
+

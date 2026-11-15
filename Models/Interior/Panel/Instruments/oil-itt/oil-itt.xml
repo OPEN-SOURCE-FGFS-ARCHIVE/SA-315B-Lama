@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>oil-itt.ac</path>
+
+  <animation>
+    <object-name>foreface</object-name>
+    <object-name>backface</object-name>
+    <object-name>oil1-needle</object-name>
+    <object-name>oil2-needle</object-name>
+    <object-name>itt-needle</object-name>
+    <object-name>bezel</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+ 
+  <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        
+		 <object-name>vitre</object-name>
+		
+    </effect> 
+ 
+
+
+  <animation>
+    <type>material</type>
+    <object-name>foreface</object-name>
+    <object-name>backface</object-name>
+    <object-name>oil1-needle</object-name>
+    <object-name>oil2-needle</object-name>
+    <object-name>itt-needle</object-name>
+    <emission>
+       <red>   0.6 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+      <factor-prop>controls/electric/directbat-switch</factor-prop>
+    </emission>
+  </animation>
+  
+
+   <!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.017</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.6</r>
+      <g>0.3</g>
+      <b>0.3</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>2</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.2</intensity>
+  <dim-factor>
+    <property>systems/electrical/outputs/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  
+   <equals>
+    <property>controls/electric/directbat-switch</property>
+    <value>true</value>
+   </equals>
+  
+  </condition>
+ </animation>
+
+<!-- end compositor light -->
+
+ <animation>
+    <type>rotate</type>
+    <object-name>itt-needle</object-name>
+    <property>engines/engine/tot-degc</property>
+    <interpolation>
+      <entry><ind>    25 </ind><dep>  0 </dep></entry>
+      <entry><ind> 925 </ind><dep> 70 </dep></entry>
+    </interpolation>
+     <center>
+      <x-m>  0.00 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> -0.0038 </z-m>
+     </center>
+    <axis>
+      <x>  -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>oil1-needle</object-name>
+    <property>engines/engine/n2-rpm</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 39980 </ind><dep> 84 </dep></entry>
+    </interpolation>
+     <center>
+      <x-m>  0.00 </x-m>
+      <y-m> 0.0276 </y-m>
+      <z-m> -0.0089 </z-m>
+     </center>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>oil2-needle</object-name>
+    <property>rotors/main/torque</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 10980 </ind><dep> -80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00 </x-m>
+      <y-m> -0.0276 </y-m>
+      <z-m> -0.0089 </z-m>
+      </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

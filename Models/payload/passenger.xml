@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+		<name>pilot1</name>
+		<path>Aircraft/SA-315B-Lama/Models/People/pilot.xml</path>
+		<offsets>
+			<x-m>2.27</x-m>
+			<y-m>1.05</y-m>
+			<z-m>0.7</z-m>
+		</offsets>
+		
+	</model>	
+
+
+<!-- right basket -->
+<model>
+
+<path>Aircraft/SA-315B-Lama/Models/kit/basket/basket.xml</path>
+<offsets>
+<x-m> -0.4 </x-m>
+<y-m>  -0.8 </y-m>
+<z-m> -0.7 </z-m>
+</offsets>
+</model>
+
+<!-- left basket -->
+<model>
+
+<path>Aircraft/SA-315B-Lama/Models/kit/basket/basket.xml</path>
+<offsets>
+<x-m> -0.4 </x-m>
+<y-m>  0.8 </y-m>
+<z-m> -0.7 </z-m>
+</offsets>
+</model>
+
+</PropertyList>

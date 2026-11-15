@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>overhead.ac</path>
+  
+  <animation>
+    <type>material</type>
+    <object-name>overhead</object-name>
+    
+    <emission>
+        <red>0.1</red>
+        <green>0.1</green>
+        <blue>0.1</blue>
+      <factor-prop>controls/electric/directbat-switch</factor-prop>
+    </emission>
+  </animation>
+  
+   <!-- Beacon -->
+   
+    <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/beacon.xml</path>
+    <offsets>
+      <x-m> 0.48 </x-m>
+      <y-m>  0.090 </y-m>
+      <z-m> 0.679 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+   
+<!-- landing light -->
+
+<model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/landing-lights.xml</path>
+    <offsets>
+      <x-m> 0.48 </x-m>
+      <y-m>  0.030 </y-m>
+      <z-m> 0.679 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+  
+<!-- Nav lights -->
+
+<model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/nav.xml</path>
+    <offsets>
+      <x-m> 0.48 </x-m>
+      <y-m>  -0.030 </y-m>
+      <z-m> 0.679 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+  <!-- strobes -->
+
+<model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/strobe.xml</path>
+    <offsets>
+      <x-m> 0.48 </x-m>
+      <y-m>  -0.0850 </y-m>
+      <z-m> 0.679 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+   <!-- pitot -->
+
+<model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/pitot.xml</path>
+    <offsets>
+       <x-m> 0.382 </x-m>
+      <y-m>  0.108 </y-m>
+      <z-m> 0.656 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+  
+    <!-- avionics -->
+
+<model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/avionics.xml</path>
+    <offsets>
+       <x-m> 0.382 </x-m>
+      <y-m>  0.06</y-m>
+      <z-m> 0.656 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+  
+   <!-- battery -->
+
+<model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/batt.xml</path>
+    <offsets>
+       <x-m> 0.382 </x-m>
+      <y-m>  -0.09 </y-m>
+      <z-m> 0.656 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- WL test -->
+
+<model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/switches/WL-test.xml</path>
+    <offsets>
+       <x-m> 0.282 </x-m>
+      <y-m>  -0.08 </y-m>
+      <z-m> 0.635 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> 102.000 </pitch-deg>
+      <heading-deg>180.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+

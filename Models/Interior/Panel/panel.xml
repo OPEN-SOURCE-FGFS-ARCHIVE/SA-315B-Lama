@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel1.ac</path>
+
+  <animation>
+    <object-name>panel1</object-name>
+    <object-name>panel2</object-name>
+    <object-name>panel3</object-name>
+    <object-name>panel4</object-name>
+    <object-name>panel5</object-name>
+    <object-name>sur1</object-name>
+    <object-name>sur2</object-name>
+    <object-name>sur3</object-name>
+    <object-name>sur4</object-name>
+    <object-name>sur5</object-name>
+    <object-name>rotor-brake</object-name>
+  </animation>
+
+  <!-- Première rangée de gauche à droite -->
+  
+ <!-- <model>
+		
+		<path>Aircraft/Instruments-3d/garmin196/garmin196_support1.xml</path>
+		<offsets>
+			<x-m>-0.245</x-m>
+      <y-m>0.05</y-m>
+      <z-m>0.28</z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg>   15 </heading-deg>
+		</offsets>
+		
+	</model>-->
+	
+	 <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/mid-panel.xml</path>
+    <offsets>
+      <x-m> 0.003 </x-m>
+      <y-m> -0.0 </y-m>
+      <z-m>  0.0 </z-m>
+    </offsets>
+  </model>
+  
+  
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -0.222 </x-m>
+      <y-m> -0.181 </y-m>
+      <z-m>  0.112 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -0.208 </x-m>
+      <y-m> -0.060 </y-m>
+      <z-m>  0.112 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.231 </x-m>
+      <y-m>  0.060 </y-m>
+      <z-m>  0.112 </z-m>
+    </offsets>
+  </model>
+  
+   
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/surround/surround.xml</path>
+    <offsets>
+      <x-m> -0.223 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m>  0.11 </z-m>
+    </offsets>
+	
+  </model>
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -0.233 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m>  0.11 </z-m>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.35</y-offset>
+    <z-offset>1.35</z-offset>
+   </animation>
+   </overlay>
+  </model>
+
+  <!-- Seconde rangée de gauche à droite -->
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/vor/vor.xml</path>
+    <offsets>
+      <x-m> -0.223 </x-m>
+      <y-m> -0.181 </y-m>
+      <z-m> -0.014 </z-m>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.25</x-offset>
+    <y-offset>1.25</y-offset>
+    <z-offset>1.25</z-offset>
+   </animation>
+   </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <offsets>
+      <x-m> -0.221 </x-m>
+      <y-m> -0.060 </y-m>
+      <z-m> -0.014 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/gsdi/gsdi.xml</path>
+    <offsets>
+      <x-m> -0.233 </x-m>
+      <y-m>  0.061 </y-m>
+        <z-m> -0.015 </z-m>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.65</y-offset>
+    <z-offset>1.65</z-offset>
+   </animation>
+   </overlay>
+  </model>
+  
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/surround/surround.xml</path>
+    <offsets>
+      <x-m> -0.224 </x-m>
+      <y-m>  0.061 </y-m>
+        <z-m> -0.015 </z-m>
+    </offsets>
+	
+  </model>
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/torque/torque.xml</path>
+    <offsets>
+      <x-m> -0.233 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m> -0.014 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/surround/surround.xml</path>
+    <offsets>
+       <x-m> -0.223 </x-m>
+      <y-m>  0.182 </y-m>
+      <z-m> -0.014 </z-m>
+    </offsets>
+</model>
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/yaw-ball/ball.xml</path>
+    <offsets>
+       <x-m> -0.21 </x-m>
+      <y-m>  0.063 </y-m>
+      <z-m> -0.11 </z-m>
+	  <pitch-deg>-4</pitch-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.95</y-offset>
+    <z-offset>0.85</z-offset>
+   </animation>
+   </overlay>
+</model>
+
+<!-- engine itt and oil -->
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/oil-itt/oil-itt.xml</path>
+    <offsets>
+      <x-m> -0.147 </x-m>
+      <y-m>  -0.0523 </y-m>
+      <z-m> -0.263 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.78</y-offset>
+    <z-offset>0.85</z-offset>
+   </animation>
+   </overlay>
+  </model>
+  
+  <!-- voltage -->
+  
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/voltage/voltage.xml</path>
+    <offsets>
+      <x-m> -0.183 </x-m>
+      <y-m>  -0.063 </y-m>
+      <z-m> -0.1995 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.2</y-offset>
+    <z-offset>1.23</z-offset>
+   </animation>
+   </overlay>
+  </model>
+  
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/surround/surround.xml</path>
+    <offsets>
+     <x-m> -0.183 </x-m>
+      <y-m>  -0.063 </y-m>
+      <z-m> -0.1995 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.48</y-offset>
+    <z-offset>0.51</z-offset>
+   </animation>
+   </overlay>
+</model>
+  
+  
+
+<!-- clock -->
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> -0.187 </x-m>
+      <y-m>  -0.001 </y-m>
+      <z-m> -0.195 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.65</y-offset>
+    <z-offset>0.71</z-offset>
+   </animation>
+   </overlay>
+  </model>
+  
+  
+  <!-- fuel pump switch -->
+  
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/Switch/pump-lights.xml</path>
+    <offsets>
+      <x-m> -0.16 </x-m>
+      <y-m>  -0.001 </y-m>
+      <z-m> -0.25 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.5</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+   </overlay>
+  </model>
+  
+  <!-- % fuel -->
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/percentfuel/percentfuel.xml</path>
+    <offsets>
+      <x-m> -0.182 </x-m>
+       <y-m>  0.0614 </y-m>
+      <z-m> -0.202 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.05</y-offset>
+    <z-offset>1.15</z-offset>
+   </animation>
+   </overlay>
+  </model>
+  
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/surround/surround.xml</path>
+    <offsets>
+       <x-m> -0.182 </x-m>
+       <y-m>  0.0614 </y-m>
+      <z-m> -0.202 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.48</y-offset>
+    <z-offset>0.51</z-offset>
+   </animation>
+   </overlay>
+</model>
+
+<!-- rotor-engine rpm -->
+
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m> -0.149 </x-m>
+      <y-m>  0.0515 </y-m>
+      <z-m> -0.265 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.78</y-offset>
+    <z-offset>0.85</z-offset>
+   </animation>
+   </overlay>
+  </model>
+  
+  <!-- engine starter -->
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/Enginepanel/enginepanel.xml</path>
+    <offsets>
+       <x-m> -0.151 </x-m>
+       <y-m>  -0.055 </y-m>
+      <z-m> -0.287 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -26.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+	 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+   </overlay>
+</model>
+
+  <!-- Panneau central bas -->
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/kx165/kx165-1.xml</path>
+    <offsets>
+      <x-m> -0.08 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.35 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -46.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+   <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/kx165/kx165-2.xml</path>
+    <offsets>
+      <x-m> -0.04 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.385</z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -46.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+  <model>
+    <path>Aircraft/SA-315B-Lama/Models/Interior/Panel/Instruments/GTX327/gtx-327/gtx-327.xml</path>
+    <offsets>
+      <x-m> -0.01 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.42 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -46.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+ 
+  
+  
+  
+  
+
+     <animation>
+            <type>pick</type>
+            <object-name>rotor-brake</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/rotor/brake</property>
+                </binding>
+            </action>
+        </animation>
+
+     <animation>
+            <type>rotate</type>
+            <object-name>rotor-brake</object-name>
+            <property>/controls/rotor/brake</property>
+            <interpolation>
+                <entry>
+                    <ind>0.0</ind>
+                    <dep>-90</dep>
+                </entry>
+                <entry>
+                    <ind>0.31</ind>
+                    <dep>-90</dep>
+                </entry>
+                <entry>
+                    <ind>0.62</ind>
+                    <dep>-90</dep>
+                </entry>
+                <entry>
+                    <ind>0.95</ind>
+                    <dep>-90</dep>
+                </entry>
+                <entry>
+                    <ind>1.0</ind>
+                    <dep>0</dep>
+                </entry>
+            </interpolation>
+            <axis>
+              <x1-m>  -0.351 </x1-m>
+              <y1-m>  0.237 </y1-m>
+              <z1-m>  -0.141 </z1-m>
+              <x2-m>  -0.2052 </x2-m>
+              <y2-m>  0.237 </y2-m>
+              <z2-m>  -0.101 </z2-m>
+             </axis>
+        </animation>
+
+       <animation>
+            <type>translate</type>
+            <object-name>rotor-brake</object-name>
+            <property>/controls/rotor/brake</property>
+            <factor>0.090</factor>
+             <axis>
+              <x1-m>  -0.351 </x1-m>
+              <y1-m>  0.237 </y1-m>
+              <z1-m>  -0.141 </z1-m>
+              <x2-m>  -0.2052 </x2-m>
+              <y2-m>  0.237 </y2-m>
+              <z2-m>  -0.101 </z2-m>
+             </axis>
+        </animation>
+		
+		
+<!-- power lever + fuel cut off animations -->
+
+ <!--<animation>
+    <type>material</type>
+    <object-name>fuel-cutoff</object-name>
+   
+    <emission>
+      <factor-prop>controls/electric/directbat-switch</factor-prop>
+      <red>   0.3 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+  </animation>-->
+
+ <animation>
+    <type>rotate</type>
+   <object-name>group_42</object-name>
+   <object-name>fuel-cutoff</object-name>
+    <property>controls/engines/engine/cutoff</property>
+   <factor>63</factor>
+    <center>
+       <x-m> 0.1</x-m>
+        <y-m> 0 </y-m>
+        <z-m>-0.51</z-m>  
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+<type>pick</type>
+    <object-name>group_42</object-name>
+   <object-name>fuel-cutoff</object-name>
+	<action>
+	<button>0</button>
+      <repeatable>false</repeatable>
+ 		  <binding>
+        <command>property-toggle</command>
+       <property>controls/engines/engine/cutoff</property>
+      </binding>	
+		<binding>
+        <command>property-toggle</command>
+       <property>controls/engines/engine[1]/cutoff</property>
+      </binding>	
+	</action>
+	
+	</animation>	
+
+ <animation>
+    <type>material</type>
+    <object-name>power</object-name>
+   
+    <emission>
+      <factor-prop>controls/electric/directbat-switch</factor-prop>
+      <red>   0.3 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission>
+  </animation>	
+
+<animation>
+    <type>rotate</type>
+   <object-name>group_42.044</object-name>
+     <object-name>power</object-name>
+    <property>controls/engines/engine/power</property>
+   <factor>-100</factor>
+    <center>
+       <x-m> 0.1</x-m>
+        <y-m> 0 </y-m>
+        <z-m>-0.51</z-m>  
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+</PropertyList>

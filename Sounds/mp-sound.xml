@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<!--
+	thanks to the SAR simulation (GPL) for the helicopter sounds,
+	and the Urban game (LGPL) for the weapon sounds
+
+	+x = aft
+	+y = left
+	+z = up
+-->
+
+<PropertyList>
+	<fx>
+	
+	
+<rotor>
+			<name>stall</name>
+			<mode>looped</mode>
+			<path>Aircraft/SA-315B-Lama/Sounds/XUH1.wav</path>
+			 <condition>
+        <and>
+		<property>sim/current-view/internal</property>
+          <greater-than>
+            <property>rotors/main/rpm</property>
+            <value>50</value>
+          </greater-than>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>rotors/main/stall-filtered</property>
+        <factor>60</factor>
+        <max>0.8</max>
+      </volume>
+      <pitch>
+        <property>rotors/main/rpm</property>
+        <factor>0.00825</factor>
+        <offset>0</offset>
+        <max>2.5</max>
+      </pitch>
+      <reference-dist>500</reference-dist>
+      <max-dist>5000</max-dist>
+		</rotor>
+		
+		<rotor>
+			<name>stall-in</name>
+			<mode>looped</mode>
+			<path>Aircraft/SA-315B-Lama/Sounds/XUH1.wav</path>
+			 <condition>
+        <and>
+		<property>sim/current-view/external</property>
+          <greater-than>
+            <property>rotors/main/rpm</property>
+            <value>50</value>
+          </greater-than>
+          <not>
+            <property>sim/crashed</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>rotors/main/stall-filtered</property>
+        <factor>160</factor>
+        <max>0.8</max>
+      </volume>
+      <pitch>
+        <property>rotors/main/rpm</property>
+        <factor>0.00825</factor>
+        <offset>0</offset>
+        <max>2.5</max>
+      </pitch>
+      <reference-dist>500</reference-dist>
+      <max-dist>5000</max-dist>
+		</rotor>
+		
+
+		
+
+		
+	
+	
+	
+		<starter>
+			<name>starter0_start</name>
+			<mode>once</mode>
+			<path>Aircraft/SA-315B-Lama/Sounds/start-external.wav</path>
+			<condition>
+				<property>controls/engines/engine[0]/starter</property>
+			</condition>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<starter>
+			<name>starter0_loop</name>
+			<mode>looped</mode>
+			<path>Aircraft/SA-315B-Lama/Sounds/starter-loop.wav</path>
+			<condition>
+				<property>controls/engines/engine[0]/starter</property>
+			</condition>
+			<delay-sec>11.6</delay-sec>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		<starter>
+			<name>starter0_stop</name>
+			<mode>once</mode>
+			<path>Aircraft/SA-315B-Lama/Sounds/starter_stop.wav</path>
+			<condition>
+				<not>
+					<property>controls/engines/engine[0]/starter</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<position>
+				<x>-0.88</x>
+				<y>0.40</y>
+				<z>0.5</z>
+			</position>
+			<reference-dist>5</reference-dist>
+			<max-dist>10</max-dist>
+		</starter>
+
+		
+
+		
+
+	
+
+		<rotor>
+			<name>rotor-outside</name>
+			<mode>looped</mode>
+			<path>Aircraft/SA-315B-Lama/Sounds/running-outside.wav</path>
+			<condition>
+				<and>
+					<not>
+						<property>sim/current-view/internal</property>
+					</not>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>50</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.002</factor>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.002262</factor>
+				<offset>0</offset>
+				<min>0</min>
+				<max>1.5</max>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+		</rotor>
+
+	
+		
+
+		<rotor>
+			<name>stall</name>
+			<mode>looped</mode>
+			<path>Aircraft/SA-315B-Lama/Sounds/rotor_stall.wav</path>
+			<condition>
+				<and>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>50</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>sim/model/b0105/sound/volume</property>
+				<factor>0.8</factor>
+			</volume>
+			<volume>
+				<property>rotors/main/stall-filtered</property>
+				<factor>75</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.002262</factor>
+				<offset>0</offset>
+				<max>1.75</max>
+			</pitch>
+			<reference-dist>1000</reference-dist>
+			<max-dist>3000</max-dist>
+		</rotor>
+
+		<!-- extenal  -->
+		
+		<rotor>
+			<name>vortex1-front-left-ext</name>
+			<path>Aircraft/SA-315B-Lama/Sounds/XUH1.wav</path>
+			<mode>looped</mode>
+			<condition>
+			<not>
+				<property>sim/current-view/internal</property>
+				</not>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>5</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE2</property>
+				<factor>0.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.0261096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>.14</y>
+				<z>0.4</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+		</rotor>
+		<rotor>
+			<name>vortex1-front-right-ext</name>
+			<path>Aircraft/SA-315B-Lama/Sounds/XUH1.wav</path>
+			<mode>looped</mode>
+			<condition>
+			<not>
+				<property>sim/current-view/internal</property>
+				</not>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>5</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE2</property>
+				<factor>0.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.0261096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>-.86</y>
+				<z>0.4</z>
+			</position>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+		</rotor>
+			<door>
+			<name>close right frontdoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+					<property>sim/model/bo105/doors/door[0]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>1.0</x>
+				<y>1.5</y>
+				<z>-1.5</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+
+		<door>
+			<name>close left frontdoor</name>
+			<mode>once</mode>
+			<path>Sounds/door_close.wav</path>
+			<condition>
+				<equals>
+				<property>sim/model/bo105/doors/door[1]/position-norm</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<position>
+				<x>-1.0</x>
+				<y>1.5</y>
+				<z>-1.5</z>
+			</position>
+			<volume>
+				<factor>0.3</factor>
+			</volume>
+			<reference-dist>15</reference-dist>
+			<max-dist>50</max-dist>
+		</door>
+		
+		
+		
+		<!-- extenal  -->
+		
+		<rotor>
+			<name>vortex1-front-left-ext</name>
+			<path>Aircraft/SA-315B-Lama/Sounds/XUH1.wav</path>
+			<mode>looped</mode>
+			<condition>
+			<not>
+				<property>sim/current-view/internal</property>
+				</not>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>5</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE2</property>
+				<factor>0.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.0261096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>.14</y>
+				<z>0.4</z>
+			</position>
+		</rotor>
+		<rotor>
+			<name>vortex1-front-right-ext</name>
+			<path>Aircraft/SA-315B-Lama/Sounds/XUH1.wav</path>
+			<mode>looped</mode>
+			<condition>
+			<not>
+				<property>sim/current-view/internal</property>
+				</not>
+                <greater-than>
+                    <property>/sim/model/bo105/headsetholder/position-deg</property>
+                    <value>0</value>
+                </greater-than>
+				<not>
+					<property>/sim/crashed</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/sound/vibration</property>
+				<factor>5</factor>
+			</volume>
+            <volume>
+				<property>/sounds/H145/rotors/IGE2</property>
+				<factor>0.5</factor>
+			</volume>
+			<pitch>
+				<property>/rotors/main/rpm</property>
+				<offset>0</offset>
+				<factor>0.0261096605744</factor>
+			</pitch>
+			<position>
+				<x>.1</x>
+				<y>-.86</y>
+				<z>0.4</z>
+			</position>
+		</rotor>
+		
+		<rotor>
+            <name>tail_rotor</name>
+            <mode>looped</mode>
+            <path>Aircraft/bell430/Sounds/tailrotor.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>rotors/main/rpm</property>
+                        <value>50</value>
+                    </greater-than>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+			<not>
+			<property>sim/current-view/internal</property>
+			</not>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <property>rotors/tail/rpm</property>
+                <factor>0.0006</factor>
+                <offset>-0.0</offset>
+                <max>2.5</max>
+            </pitch>
+            <position>
+                <x> -2 </x>
+                <y> -0.4 </y>
+                <z> 1.3 </z>
+            </position>
+            <orientation>
+                <x> 1 </x>
+                <y> . </y>
+                <z> 0 </z>
+                <inner-angle>110</inner-angle>
+                <outer-angle>220</outer-angle>
+                <outer-gain>0.1</outer-gain>
+            </orientation>
+            <reference-dist>500</reference-dist>
+            <max-dist>1000</max-dist>
+        </rotor>
+		
+		
+	</fx>
+</PropertyList>

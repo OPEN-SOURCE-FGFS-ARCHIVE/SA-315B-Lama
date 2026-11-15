@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>AS315_B_lama.ac</path>
+
+ 
+	
+	<effect>
+    <inherits-from>Aircraft/SA-315B-Lama/Models/Effects/bumps</inherits-from>
+     <object-name>leftdoor-frame</object-name>
+    <object-name>rightdoor-frame</object-name>
+	<object-name>cockpit-frame</object-name>
+    <object-name>cache</object-name>
+    <object-name>fuel-tank</object-name>
+    <object-name>structure</object-name>
+   <object-name>fuselage</object-name>
+	 <object-name>skids</object-name>
+	  <object-name>stabilizer</object-name>
+	   <object-name>tailrotor-guard</object-name>
+	   <object-name>box</object-name>
+	   <object-name>Treuil-Bras</object-name>
+  </effect>	
+	
+	
+
+  <animation>
+    <object-name>cockpit-frame</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>structure</object-name>
+    <object-name>fuel-tank</object-name>
+    <object-name>stabilizer</object-name>
+    <object-name>cache</object-name>
+    <object-name>leftdoor-frame</object-name>
+    <object-name>rightdoor-frame</object-name>
+    <object-name>T-rotorgears</object-name>
+    <object-name>tailrotor-guard</object-name>
+    <object-name>skids</object-name>
+    <object-name>rigging-tray</object-name>
+    <object-name>moteur</object-name>
+    <object-name>hook</object-name>
+    <object-name>supports</object-name>
+    <object-name>lights</object-name>
+    <object-name>obj1</object-name>
+    <object-name>rigging-tray</object-name>
+  </animation>
+
+  
+  
+	
+  <!-- glass -->
+  
+  
+
+	<!-- ALS effects -->
+	
+   
+	 <effect>
+        <!--<inherits-from>Effects/glass</inherits-from> Issues with the glass model which doesnt like this shader -->
+		<inherits-from>Aircraft/SA-315B-Lama/Models/Effects/glassout</inherits-from><!-- using this one as a temporary fix -->
+        <object-name>rightdoor-glassin</object-name>
+		<object-name>leftdoor-glassin</object-name>
+		<object-name>canopyin</object-name>
+     </effect>
+    
+
+	<effect>
+		<inherits-from>Aircraft/SA-315B-Lama/Models/Effects/ec135reflectglas-uber</inherits-from>
+		
+	    <object-name>rightdoor-glass</object-name>
+		<object-name>leftdoor-glass</object-name>		
+		<object-name>canopy</object-name>      
+        
+	</effect>
+	
+	
+	
+  
+  
+</PropertyList>
+
